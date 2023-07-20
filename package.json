@@ -1,15 +1,66 @@
 {
-  "name": "@iberzlt/npm-template",
-  "version": "0.0.0",
-  "description": "npm package template",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
+  "name": "@iberzlt/fraize",
+  "version": "0.0.1",
+  "description": "Fraise is an open-source integrated development platform designed to streamline and manage the complete development process. Features include requirements gathering, progress management, automatic code generation, test case generation, inbuilt chat, code editing, API specification creation, and more.",
+  "productName": "fraize",
   "author": "y.takano",
-  "license": "MIT"
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "test": "echo \"No test specified\" && exit 0",
+    "dev": "run-p dev:router quasar:dev",
+    "dev:electron": "quasar dev -m electron",
+    "dev:android": "quasar dev -m capacitor -T android",
+    "dev:ios": "quasar dev -m capacitor -T ios",
+    "dev:router": "ts-node --project tsconfig.router.json ./vue-router-generator/serve.ts",
+    "prod": "quasar serve ./dist/spa --history",
+    "build": "quasar build",
+    "build:electron": "npm-run-all build:router quasar:build:electron",
+    "build:android": "quasar build -m capacitor -T android",
+    "build:ios": "quasar build -m capacitor -T ios",
+    "build:router": "ts-node --project tsconfig.router.json ./vue-router-generator/build.ts",
+    "quasar:dev": "quasar dev",
+    "quasar:dev:electron": "quasar dev -m electron",
+    "quasar:dev:android": "quasar dev -m capacitor -T android",
+    "quasar:dev:ios": "quasar dev -m capacitor -T ios",
+    "quasar:prod": "quasar serve ./dist/spa --history",
+    "quasar:build": "quasar build",
+    "quasar:build:electron": "quasar build -m electron -T win32",
+    "quasar:build:android": "quasar build -m capacitor -T android",
+    "quasar:build:ios": "quasar build -m capacitor -T ios"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.4",
+    "axios": "^1.2.1",
+    "i": "^0.3.7",
+    "npm": "^9.8.1",
+    "pinia": "^2.0.11",
+    "quasar": "^2.6.0",
+    "vue": "^3.0.0",
+    "vue-i18n": "^9.2.2",
+    "vue-route-generator": "^1.0.0",
+    "vue-router": "^4.0.0",
+    "vue-router-layout": "^0.4.1"
+  },
+  "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^3.3.1",
+    "@quasar/app-vite": "^1.3.0",
+    "@types/node": "^12.20.21",
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "autoprefixer": "^10.4.2",
+    "electron": "^25.3.1",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
+  },
+  "engines": {
+    "node": "^18 || ^16 || ^14.19",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
 }

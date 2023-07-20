@@ -1,0 +1,10 @@
+{
+  "pagesDir": "src/pages",
+  "routePrefix": "/",
+  "ignorePattern": "/(^|[/\\])../",
+  "outDir": "src/router/",
+  "pagesImportPrefix": "pages/",
+  "generatorConfig": {
+    "nested": true
+  }
+}

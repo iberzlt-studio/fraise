@@ -1,0 +1,12 @@
+{
+  "name": "@iberzlt/fraize",
+  "version": "0.0.1",
+  "description": "Fraise is an open-source integrated development platform designed to streamline and manage the complete development process. Features include requirements gathering, progress management, automatic code generation, test case generation, inbuilt chat, code editing, API specification creation, and more.",
+  "author": "y.takano",
+  "private": true,
+  "dependencies": {
+    "@capacitor/app": "^5.0.0",
+    "@capacitor/cli": "^5.0.0",
+    "@capacitor/core": "^5.0.0"
+  }
+}

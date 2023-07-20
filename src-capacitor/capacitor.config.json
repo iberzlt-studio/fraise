@@ -1,0 +1,10 @@
+{
+  "appId": "com.iberzltstudio.fraize",
+  "appName": "com.iberzltstudio.fraize",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
