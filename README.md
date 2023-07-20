@@ -32,4 +32,4 @@ Fraiseは開発者がプロジェクトを一貫して管理するための統�
 
 ## ライセンス
 
-[To be added once the license is decided]
+Fraise is licensed under the MIT License. See [LICENSE](LICENSE) for the full license text.
